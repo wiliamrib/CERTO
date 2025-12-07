@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>CERTO — Centro de Excelência em Reabilitação</title>
+  <title> CERTO — Centro de Excelência em Reabilitação</title>
   <meta name="description" content="CERTO — Inclusão, reabilitação e apoio social em Uberlândia. Doe, conheça nossos serviços e participe.">
   <style>
   /* Reset minimal */
@@ -45,10 +45,10 @@
   .cards{display:flex;gap:12px;flex-wrap:wrap}
 
   /* Services */
-  .services{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:8px}
-  .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:var(--shadow)}
-  .card h3{margin:0 0 8px;font-size:16px}
-  .card p{margin:0;color:var(--muted);font-size:14px}
+  .services{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:8px;}
+  .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:var(--shadow);}
+  .card h3{margin:0 0 8px;font-size:16px;}
+  .card p{margin:0;color:var(--muted);font-size:14px;}
 
   /* Impact */
   .impact{display:flex;gap:12px;flex-wrap:wrap}
@@ -90,10 +90,10 @@
   <header>
     <div class="container top">
       <div class="brand">
-        <div class="logo" aria-hidden="true">CERTO</div>
+        <img src="./imagens-certo/305820862_514398437353740_6799149883089619635_n.jpg" width="80px">
         <div>
           <h1>CERTO</h1>
-          <div class="small">Centro de Excelência em Reabilitação — Uberlândia</div>
+          <div class="small">Centro de Excelência em Reabilitação Orientado — Uberlândia</div>
         </div>
       </div>
       <nav aria-label="Menu principal">
@@ -119,7 +119,7 @@
 
       <div class="card" aria-hidden="false">
         <!-- PLACEHOLDER: substitua o src abaixo pela imagem principal que você tem -->
-        <img src="/images/hero-placeholder.jpg" alt="Pessoas em sessão de fisioterapia no CERTO" style="width:100%;height:240px;object-fit:cover;border-radius:10px;margin-bottom:12px">
+        <img src="./imagens-certo/509434234_29955162300795829_6862636450034484821_n.jpg" alt="Pessoas em sessão de fisioterapia no CERTO" style="width:100%;height:240px;object-fit:cover;border-radius:10px;margin-bottom:12px">
         <div>
           <h3>Atendimento humano e multidisciplinar</h3>
           <p>Atendemos fisioterapia, terapia ocupacional, fonoaudiologia, psicologia, equoterapia e muito mais.</p>
@@ -149,19 +149,22 @@
         </div>
         <div class="card">
           <h3>Fonoaudiologia</h3>
+          <img src="./imagens-certo/Rubia-Jussara-fonoaudiologa-do-CIIR-durante-o-atendimento-a-um-dos-usuarios-do-CIIR.jpg" width="230px" height="150px">
           <p>Trabalhamos comunicação e funções orofaciais.</p>
         </div>
         <div class="card">
           <h3>Terapia Ocupacional</h3>
+          <img src="./imagens-certo/terapiaocupacionaladulto.jpg" width="230px" height="150px">
           <p>Atividades que fortalecem autonomia nas atividades diárias.</p>
         </div>
         <div class="card">
           <h3>Psicologia</h3>
+          <img src="./imagens-certo/Imagem do WhatsApp de 2025-12-07 à(s) 13.04.38_1615a1de.jpg" width="230px" height="150px">
           <p>Apoio emocional para pacientes e familiares.</p>
         </div>
         <div class="card">
           <h3>Equoterapia</h3>
-          <img src="./imagens-certo/490085660_1228046385988938_4157648037204164708_n.jpg"  width="230px" height="150px">
+          <img src="./imagens-certo/Imagem do WhatsApp de 2025-12-07 à(s) 13.20.19_68e92aaa.jpg"  width="230px" height="150px">
           <p>Reabilitação assistida com cavalos para desenvolvimento motor e emocional.</p>
         </div>
       </div>
@@ -191,7 +194,7 @@
         <div class="card">
           <h3>Doações</h3>
           <p>Contribuições financeiras permitem a manutenção de terapias e compra de equipamentos. Aceitamos PIX, transferência e cartão.</p>
-          <p><strong>PIX (exemplo):</strong> <span id="pix-placeholder">00000000-0000-0000-0000-000000000000</span></p>
+          <p><strong>PIX :</strong> <span id="pix-placeholder">00000000-0000-0000-0000-000000000000</span></p>
           <button class="btn btn-primary" onclick="openDonate(event)">Doar Agora</button>
         </div>
         <div class="card">
@@ -235,7 +238,7 @@
       <div>
         <h3>CERTO — Centro de Excelência em Reabilitação</h3>
         <div class="small">Rua Márcio Ribeiro da Silva, 301 — Chácaras Tubalina, Uberlândia, MG</div>
-        <div class="small" style="margin-top:8px">Telefone: (34) 3238-3443 • Email: contato@certo.org (exemplo)</div>
+        <div class="small" style="margin-top:8px">Telefone: (34) 3238-3443 • Instagram: @certouberlandia  </div>
         <div style="margin-top:12px">
           <a href="#">Instagram</a> • <a href="#">Facebook</a>
         </div>
@@ -352,7 +355,7 @@
   }
   // Replace placeholders quickly (use this to set real PIX e contatos)
   (function initPlaceholders(){
-    const realPIX = 'SEU-PIX-AQUI'; // <- substitua pela chave PIX real (ou CPF/CNPJ/EMAIL/TELEFONE)
+    const realPIX = '21.246.855/OOO1-77'; // <- substitua pela chave PIX real (ou CPF/CNPJ/EMAIL/TELEFONE)
     document.getElementById('pixKey').textContent = realPIX;
     document.getElementById('pix-placeholder').textContent = realPIX;
     // update contact email if needed
