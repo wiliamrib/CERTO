@@ -1,5 +1,30 @@
 {
+  "name": "certo-donations-api",
+  "version": "1.0.0",
+  "description": "API para gerenciar doações no site do CERTO",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "test": "jest"
+  },
+  "keywords": [
+    "doações",
+    "certo"
+  ],
+  "author": "",
+  "license": "MIT",
   "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^4.22.1",
+    "express-validator": "^7.3.1",
+    "mongodb": "^7.0.0",
+    "mongoose": "^7.8.8",
+    "stripe": "^20.0.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
     "nodemon": "^3.1.11"
   }
 }
