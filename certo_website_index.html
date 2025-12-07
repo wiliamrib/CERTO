@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>CERTO — Centro de Excelência em Reabilitação</title>
+  <meta name="description" content="CERTO — Inclusão, reabilitação e apoio social em Uberlândia. Doe, conheça nossos serviços e participe.">
+  <style>
+  /* Reset minimal */
+  :root{
+    --bg:#f7f8fb;
+    --card:#ffffff;
+    --accent:#90EE90;
+    --accent-2:#00a38a;
+    --muted:#6b7280;
+    --success:#0b8457;
+    --radius:12px;
+    --max-width:1100px;
+    --container-padding:24px;
+    --shadow: 0 6px 18px rgba(12,20,30,0.08);
+    font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%;margin:0;background:var(--bg);color:#111827}
+  a{color:inherit;text-decoration:none}
+  .container{max-width:var(--max-width);margin:0 auto;padding:var(--container-padding)}
+
+  header{background:linear-gradient(90deg, rgba(0,102,161,0.06), rgba(0,163,138,0.06));backdrop-filter: blur(2px)}
+  .top{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+  .brand{display:flex;gap:12px;align-items:center}
+  .logo{width:56px;height:56px;border-radius:10px;background:#e8f5e2;display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent)}
+  .brand h1{font-size:18px;margin:0}
+  nav{display:flex;gap:14px;align-items:center}
+  nav a{padding:8px 12px;border-radius:8px;color:var(--muted);font-weight:600}
+  nav a.cta{background:var(--accent);color:#fff}
+
+  /* Banner */
+  .hero{display:grid;grid-template-columns:1fr;gap:20px;align-items:center;padding:36px 0}
+  .hero-grid{display:grid;grid-template-columns:1fr;gap:20px}
+  .hero-copy h2{font-size:28px;margin:0 0 12px}
+  .hero-copy p{margin:0 0 18px;color:var(--muted)}
+  .btn{display:inline-block;padding:12px 18px;border-radius:10px;font-weight:700;border:0;cursor:pointer}
+  .btn-primary{background:var(--accent);color:#fff}
+  .btn-ghost{background:transparent;border:2px solid rgba(0,0,0,0.06)}
+  .cards{display:flex;gap:12px;flex-wrap:wrap}
+
+  /* Services */
+  .services{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:8px}
+  .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:var(--shadow)}
+  .card h3{margin:0 0 8px;font-size:16px}
+  .card p{margin:0;color:var(--muted);font-size:14px}
+
+  /* Impact */
+  .impact{display:flex;gap:12px;flex-wrap:wrap}
+  .stat{flex:1;min-width:160px;background:linear-gradient(180deg,#fff,#fbfdff);padding:18px;border-radius:12px;box-shadow:var(--shadow)}
+  .stat strong{display:block;font-size:20px}
+  .stat span{color:var(--muted)}
+
+  /* Help */
+  .help-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-top:16px}
+
+  /* Testimonials */
+  .testimonials{display:flex;flex-direction:column;gap:12px}
+  .testimonial{background:linear-gradient(180deg,#fff,#fff);padding:16px;border-radius:12px;box-shadow:var(--shadow)}
+
+  footer{padding:28px 0;margin-top:28px}
+  .footer-grid{display:grid;grid-template-columns:1fr 200px;gap:18px;align-items:start}
+  .small{font-size:13px;color:var(--muted)}
+
+  /* Responsive */
+  @media (min-width:720px){
+    .hero{grid-template-columns:1fr 460px}
+    .hero-grid{grid-template-columns:1fr}
+    .services{grid-template-columns:repeat(3,1fr)}
+    .help-grid{grid-template-columns:repeat(3,1fr)}
+  }
+  @media (max-width:719px){
+    nav{display:none}
+    .logo{width:48px;height:48px}
+    .hero-copy h2{font-size:22px}
+    .services{grid-template-columns:repeat(2,1fr)}
+    .help-grid{grid-template-columns:1fr}
+  }
+
+  /* Accessibility focus */
+  a:focus,button:focus{outline:3px solid rgba(0,102,161,0.12);outline-offset:3px}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container top">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">CERTO</div>
+        <div>
+          <h1>CERTO</h1>
+          <div class="small">Centro de Excelência em Reabilitação — Uberlândia</div>
+        </div>
+      </div>
+      <nav aria-label="Menu principal">
+        <a href="#quem">Quem Somos</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#como-ajudar">Como Ajudar</a>
+        <a href="#transparencia">Transparência</a>
+        <a class="cta btn" href="#doar" onclick="openDonate(event)">DOAR AGORA</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-copy">
+        <h2>Há mais de 30 anos transformando vidas por meio da reabilitação e inclusão.</h2>
+        <p>O CERTO oferece atendimentos multidisciplinares especializados para pessoas com deficiência e em situação de vulnerabilidade social. Sua contribuição mantém terapias, equipamentos e projetos de inclusão.</p>
+        <div class="cards">
+          <button class="btn btn-primary" onclick="document.getElementById('como-ajudar').scrollIntoView({behavior:'smooth'})">Quero Ajudar</button>
+          <a href="#servicos" class="btn btn-ghost">Ver Serviços</a>
+        </div>
+      </div>
+
+      <div class="card" aria-hidden="false">
+        <!-- PLACEHOLDER: substitua o src abaixo pela imagem principal que você tem -->
+        <img src="/images/hero-placeholder.jpg" alt="Pessoas em sessão de fisioterapia no CERTO" style="width:100%;height:240px;object-fit:cover;border-radius:10px;margin-bottom:12px">
+        <div>
+          <h3>Atendimento humano e multidisciplinar</h3>
+          <p>Atendemos fisioterapia, terapia ocupacional, fonoaudiologia, psicologia, equoterapia e muito mais.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="quem" style="margin-top:18px">
+      <div class="card">
+        <h2>Quem Somos</h2>
+        <p>O Centro de Excelência em Reabilitação e Trabalho Orientado — CERTO — atua desde 1986 com foco na reabilitação física e inclusão social de pessoas de baixa renda. Nossa equipe multidisciplinar trabalha para oferecer cuidado integral e promover autonomia.</p>
+      </div>
+    </section>
+
+    <section id="servicos" style="margin-top:18px">
+      <h2>Serviços oferecidos</h2>
+      <div class="services">
+        <div class="card">
+          <h3>Fisioterapia</h3>
+          <img src="./imagens-certo/486610386_1213861320740778_1792945735826872322_n.jpg" width="230px" height="150px">
+          <p>Atendimentos individuais e atividades para reabilitação motora.</p>
+        </div>
+        <div class="card">
+          <h3>Hidroterapia</h3>
+          <img src="./imagens-certo/481536524_1193575592769351_2195297179041748412_n.jpg" width="230px" height="150px">
+          <p>Terapias aquáticas para ganho de mobilidade e alívio de dor.</p>
+        </div>
+        <div class="card">
+          <h3>Fonoaudiologia</h3>
+          <p>Trabalhamos comunicação e funções orofaciais.</p>
+        </div>
+        <div class="card">
+          <h3>Terapia Ocupacional</h3>
+          <p>Atividades que fortalecem autonomia nas atividades diárias.</p>
+        </div>
+        <div class="card">
+          <h3>Psicologia</h3>
+          <p>Apoio emocional para pacientes e familiares.</p>
+        </div>
+        <div class="card">
+          <h3>Equoterapia</h3>
+          <img src="./imagens-certo/490085660_1228046385988938_4157648037204164708_n.jpg"  width="230px" height="150px">
+          <p>Reabilitação assistida com cavalos para desenvolvimento motor e emocional.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="impacto" style="margin-top:18px">
+      <h2>Impacto</h2>
+      <div class="impact">
+        <div class="stat">
+          <strong>+5.000</strong>
+          <span>atendimentos mensais</span>
+        </div>
+        <div class="stat">
+          <strong>Desde 1986</strong>
+          <span>atendendo a comunidade</span>
+        </div>
+        <div class="stat">
+          <strong>Equipa multidisciplinar</strong>
+          <span>Profissionais qualificados</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="como-ajudar" style="margin-top:18px">
+      <h2>Como Ajudar</h2>
+      <div class="help-grid">
+        <div class="card">
+          <h3>Doações</h3>
+          <p>Contribuições financeiras permitem a manutenção de terapias e compra de equipamentos. Aceitamos PIX, transferência e cartão.</p>
+          <p><strong>PIX (exemplo):</strong> <span id="pix-placeholder">00000000-0000-0000-0000-000000000000</span></p>
+          <button class="btn btn-primary" onclick="openDonate(event)">Doar Agora</button>
+        </div>
+        <div class="card">
+          <h3>Voluntariado</h3>
+          <p>Se você tem tempo e deseja colaborar presencialmente ou com suporte remoto, preencha o formulário de voluntariado.</p>
+          <a href="#" class="btn btn-ghost" onclick="alert('Formulário de voluntariado (implementar)')">Quero ser voluntário</a>
+        </div>
+        <div class="card">
+          <h3>Parcerias</h3>
+          <p>Empresas e organizações podem firmar parcerias para projetos sociais, campanhas e patrocínios.</p>
+          <a href="#" class="btn btn-ghost" onclick="alert('Contato para parcerias: contato@certo.org (exemplo)')">Saiba mais</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="depoimentos" style="margin-top:18px">
+      <h2>Depoimentos</h2>
+      <div class="testimonials">
+        <div class="testimonial">
+          <p>“O CERTO mudou a vida do meu filho — o acompanhamento fez toda a diferença no desenvolvimento dele.”</p>
+          <div class="small">— Família atendida</div>
+        </div>
+        <div class="testimonial">
+          <p>“Profissionais dedicados e um ambiente acolhedor. Nossa comunidade tem no CERTO um ponto de apoio fundamental.”</p>
+          <div class="small">— Parceiro local</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="transparencia" style="margin-top:18px">
+      <h2>Transparência</h2>
+      <div class="card">
+        <p>Publicamos relatórios e documentos para garantir a transparência no uso de recursos. <a href="#">Ver documentos</a> (estatuto, prestação de contas, relatórios).</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <h3>CERTO — Centro de Excelência em Reabilitação</h3>
+        <div class="small">Rua Márcio Ribeiro da Silva, 301 — Chácaras Tubalina, Uberlândia, MG</div>
+        <div class="small" style="margin-top:8px">Telefone: (34) 3238-3443 • Email: contato@certo.org (exemplo)</div>
+        <div style="margin-top:12px">
+          <a href="#">Instagram</a> • <a href="#">Facebook</a>
+        </div>
+      </div>
+      <div>
+        <div class="card">
+          <h4>Horário</h4>
+          <p>Segunda a sexta — 08:00 às 18:00</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal de doação simples -->
+  <div id="donateModal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.5);align-items:center;justify-content:center;padding:20px;z-index:9998">
+    <div style="max-width:520px;width:100%;background:#fff;padding:22px;border-radius:12px;box-shadow:0 10px 40px rgba(0,0,0,0.25)">
+      <h3>Doar para o CERTO</h3>
+      <p>Escolha uma opção de doação ou registre seus dados (nome/CPF) para controle.</p>
+
+      <!-- Formulário para salvar doação (POST /api/donations) -->
+      <form id="donationForm" onsubmit="event.preventDefault(); createDonation()" style="margin-top:10px;display:flex;flex-direction:column;gap:8px">
+        <label style="display:block">
+          Nome (deixe vazio para anônimo)
+          <input id="donorName" type="text" placeholder="Seu nome" style="width:100%;padding:8px;margin-top:6px;border-radius:8px;border:1px solid #e6e6e6">
+        </label>
+
+        <label style="display:flex;align-items:center;gap:8px">
+          <input id="isAnonymous" type="checkbox"> Doar anonimamente (ocultar nome)
+        </label>
+
+        <label style="display:block">
+          CPF
+          <input id="donorCpf" type="text" placeholder="000.000.000-00" style="width:100%;padding:8px;margin-top:6px;border-radius:8px;border:1px solid #e6e6e6">
+        </label>
+
+        <div style="display:flex;gap:8px;justify-content:flex-end;margin-top:6px">
+          <button class="btn btn-primary" type="submit">Registrar doação</button>
+          <button class="btn" type="button" onclick="closeDonate()">Fechar</button>
+        </div>
+      </form>
+
+      <div id="donationStatus" style="margin-top:12px;padding:8px;border-radius:8px;display:none;background:#f3f6f8" class="small"></div>
+
+      <hr style="margin:14px 0">
+
+      <div style="display:flex;gap:10px;flex-direction:column">
+        <button class="btn btn-primary" onclick="copyPIX()">Copiar PIX</button>
+        <!-- Alterado: abrir modal de pagamento com cartão -->
+        <button id="btnCardPayment" class="btn btn-ghost" onclick="openCardPayment()">Pagar com cartão</button>
+      </div>
+
+      <div id="pixArea" style="margin-top:12px;padding:12px;background:#f3f6f8;border-radius:8px;display:none">
+        <div><strong>PIX:</strong> <span id="pixKey">00000000-0000-0000-0000-000000000000</span></div>
+        <div class="small" style="margin-top:6px">Ao clicar em "Copiar PIX" a chave será copiada para sua área de transferência.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Novo: Modal para pagamento com cartão -->
+  <div id="cardPaymentModal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.5);align-items:center;justify-content:center;padding:20px;z-index:10000">
+    <div style="max-width:520px;width:100%;background:#fff;padding:22px;border-radius:12px;box-shadow:0 10px 40px rgba(0,0,0,0.25)">
+      <h3>Pagar com cartão</h3>
+      <p>Preencha os dados para iniciar o pagamento por cartão (teste).</p>
+
+      <form id="cardPaymentForm" onsubmit="event.preventDefault(); createCardPayment()" style="display:flex;flex-direction:column;gap:8px">
+        <label>
+          Nome (deixe vazio para anônimo)
+          <input id="cardName" type="text" placeholder="Seu nome" style="width:100%;padding:8px;margin-top:6px;border-radius:8px;border:1px solid #e6e6e6">
+        </label>
+
+        <label style="display:flex;align-items:center;gap:8px">
+          <input id="cardIsAnonymous" type="checkbox"> Doar anonimamente (ocultar nome)
+        </label>
+
+        <label>
+          CPF (obrigatório)
+          <input id="cardCpf" type="text" placeholder="000.000.000-00 ou 11 dígitos" required style="width:100%;padding:8px;margin-top:6px;border-radius:8px;border:1px solid #e6e6e6">
+        </label>
+
+        <label>
+          Valor (R$)
+          <input id="cardAmount" type="number" min="1" step="0.01" value="10.00" required style="width:200px;padding:8px;margin-top:6px;border-radius:8px;border:1px solid #e6e6e6">
+        </label>
+
+        <div style="display:flex;gap:8px;justify-content:flex-end;margin-top:6px">
+          <button class="btn btn-primary" type="submit">Iniciar pagamento</button>
+          <button class="btn" type="button" onclick="closeCardPayment()">Cancelar</button>
+        </div>
+      </form>
+
+      <div id="cardPaymentStatus" style="margin-top:12px;padding:8px;border-radius:8px;display:none;background:#f3f6f8" class="small"></div>
+
+      <div style="margin-top:10px;font-size:13px;color:#666">
+        Observação: este fluxo cria o registro e um PaymentIntent (server). Para integrar Stripe Elements/Checkout complete a implementação com as chaves públicas.
+      </div>
+    </div>
+  </div>
+
+  <script>
+  // Small interactive helpers
+  function openDonate(e){
+    e && e.preventDefault();
+    document.getElementById('donateModal').style.display = 'flex';
+    document.getElementById('pixArea').style.display = 'block';
+  }
+  function closeDonate(){
+    document.getElementById('donateModal').style.display = 'none';
+  }
+  function copyPIX(){
+    const key = document.getElementById('pixKey').textContent || '';
+    navigator.clipboard && navigator.clipboard.writeText(key).then(()=>{
+      alert('PIX copiado para a área de transferência!');
+    }).catch(()=>{ alert('Falha ao copiar. Copie manualmente: ' + key); });
+  }
+  // Replace placeholders quickly (use this to set real PIX e contatos)
+  (function initPlaceholders(){
+    const realPIX = 'SEU-PIX-AQUI'; // <- substitua pela chave PIX real (ou CPF/CNPJ/EMAIL/TELEFONE)
+    document.getElementById('pixKey').textContent = realPIX;
+    document.getElementById('pix-placeholder').textContent = realPIX;
+    // update contact email if needed
+    // document.querySelector('footer .small a[href^="mailto:"]').textContent = 'contato@certo.org'
+  })();
+
+  // Abre modal de pagamento com cartão
+  function openCardPayment(){
+    document.getElementById('cardPaymentModal').style.display = 'flex';
+    document.getElementById('cardPaymentStatus').style.display = 'none';
+    document.getElementById('cardPaymentForm').reset();
+  }
+
+  function closeCardPayment(){
+    document.getElementById('cardPaymentModal').style.display = 'none';
+  }
+
+  // Cria PaymentIntent no backend e salva no banco (POST /api/payments/create-intent)
+  async function createCardPayment(){
+    const nameInput = document.getElementById('cardName').value.trim();
+    const isAnonymous = document.getElementById('cardIsAnonymous').checked;
+    const cpf = document.getElementById('cardCpf').value.trim();
+    const amountRaw = parseFloat(document.getElementById('cardAmount').value);
+
+    const statusEl = document.getElementById('cardPaymentStatus');
+    statusEl.style.display = 'block';
+    statusEl.textContent = 'Iniciando pagamento...';
+
+    if(!cpf){
+      statusEl.textContent = 'CPF é obrigatório.';
+      return;
+    }
+    if(!amountRaw || amountRaw <= 0){
+      statusEl.textContent = 'Informe um valor válido.';
+      return;
+    }
+
+    const payload = {
+      name: isAnonymous ? null : (nameInput || null),
+      cpf: cpf,
+      amount: amountRaw
+    };
+
+    try{
+      const res = await fetch('/api/payments/create-intent', {
+        method: 'POST',
+        headers: {'Content-Type':'application/json'},
+        body: JSON.stringify(payload)
+      });
+
+      if(!res.ok){
+        const err = await res.json().catch(()=>({message:res.statusText}));
+        throw new Error(err.message || 'Erro ao criar pagamento');
+      }
+
+      const data = await res.json();
+      // data: { clientSecret, paymentId, paymentIntent }
+      statusEl.innerHTML = `Pagamento iniciado. ID: <strong>${escapeHtml(data.paymentId)}</strong><br>Client secret recebido (use Stripe.js para completar o pagamento).`;
+      // opcional: fechar modal e mostrar info / abrir painel admin
+      setTimeout(closeCardPayment, 2000);
+      if(window._donationsPanelOpen) fetchDonations();
+    }catch(err){
+      statusEl.textContent = 'Falha: ' + (err.message || err);
+      console.error(err);
+    }
+  }
+
+  // util: escape HTML para inserir conteúdo do usuário sem XSS
+  function escapeHtml(s){
+    if(!s) return '';
+    return s.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]);
+  }
+  </script>
+</body>
+</html>
